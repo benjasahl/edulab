@@ -56,7 +56,7 @@ export default function ResultsView() {
   }
 
   const inputClass =
-    "w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500";
+    "w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500";
 
   return (
     <div className="flex flex-row h-full min-h-0">
@@ -65,7 +65,7 @@ export default function ResultsView() {
         <div className="p-3 border-b border-slate-200">
           <button
             onClick={() => setShowNewForm((v) => !v)}
-            className="w-full bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+            className="w-full bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
           >
             {showNewForm ? "Avbryt" : "+ Nytt resultatset"}
           </button>
@@ -104,7 +104,7 @@ export default function ResultsView() {
             </div>
             <button
               onClick={handleCreateSet}
-              className="w-full bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+              className="w-full bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
             >
               Skapa
             </button>
@@ -125,7 +125,7 @@ export default function ResultsView() {
                 }}
                 className={`flex items-center gap-2 px-3 py-2 cursor-pointer text-sm transition-colors ${
                   isActive
-                    ? "bg-indigo-50 text-indigo-700 font-semibold"
+                    ? "bg-orange-50 text-orange-700 font-semibold"
                     : "text-slate-700 hover:bg-slate-50"
                 }`}
               >

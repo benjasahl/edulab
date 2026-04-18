@@ -71,7 +71,7 @@ export default function SeatingView() {
   // ── Styles ────────────────────────────────────────────────────────────────
 
   const inputClass =
-    "w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500";
+    "w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500";
   const labelClass = "block text-xs font-medium text-slate-600 mb-1";
 
   // ── Empty state ───────────────────────────────────────────────────────────
@@ -116,7 +116,7 @@ export default function SeatingView() {
                   value="size"
                   checked={mode === "size"}
                   onChange={() => updateSeating({ mode: "size" })}
-                  className="accent-indigo-600"
+                  className="accent-orange-600"
                 />
                 Gruppstorlek
               </label>
@@ -127,7 +127,7 @@ export default function SeatingView() {
                   value="count"
                   checked={mode === "count"}
                   onChange={() => updateSeating({ mode: "count" })}
-                  className="accent-indigo-600"
+                  className="accent-orange-600"
                 />
                 Antal grupper
               </label>
@@ -193,7 +193,7 @@ export default function SeatingView() {
                 <div className="flex items-center gap-2">
                   <input
                     type="text"
-                    className="flex-1 border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="flex-1 border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="Regeltext (t.ex. Ska inte sitta ihop)"
                     value={ex.rule}
                     onChange={(e) => updateExclusionRule(idx, e.target.value)}
@@ -216,8 +216,8 @@ export default function SeatingView() {
                         onClick={() => toggleExclusionStudent(idx, st.id)}
                         className={`text-xs px-2 py-1 rounded-lg border transition-colors ${
                           selected
-                            ? "bg-indigo-600 text-white border-indigo-600"
-                            : "bg-white text-slate-600 border-slate-200 hover:border-indigo-400"
+                            ? "bg-orange-600 text-white border-orange-600"
+                            : "bg-white text-slate-600 border-slate-200 hover:border-orange-400"
                         }`}
                       >
                         {st.firstName} {st.lastName}
@@ -238,7 +238,7 @@ export default function SeatingView() {
           <button
             onClick={handleGenerate}
             disabled={students.length === 0}
-            className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Generera grupper
           </button>
@@ -257,7 +257,7 @@ export default function SeatingView() {
                       key={gIdx}
                       className="bg-white border border-slate-200 rounded-xl p-3 min-w-[140px] shadow-sm"
                     >
-                      <p className="text-xs font-bold text-indigo-700 mb-2">
+                      <p className="text-xs font-bold text-orange-700 mb-2">
                         Grupp {gIdx + 1}
                       </p>
                       <ul className="space-y-0.5">

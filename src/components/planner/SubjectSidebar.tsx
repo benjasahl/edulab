@@ -21,7 +21,7 @@ export default function SubjectSidebar() {
         <button
           onClick={() => openSubjectDialog(null)}
           title="Nytt ämne"
-          className="flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition-colors"
+          className="flex items-center justify-center w-6 h-6 rounded-lg bg-orange-50 text-orange-600 hover:bg-orange-100 transition-colors"
         >
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -58,7 +58,7 @@ export default function SubjectSidebar() {
             {/* Edit icon — visible on hover */}
             {!locked && (
               <svg
-                className="w-3.5 h-3.5 text-slate-300 group-hover:text-indigo-400 flex-none transition-colors"
+                className="w-3.5 h-3.5 text-slate-300 group-hover:text-orange-400 flex-none transition-colors"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -79,7 +79,7 @@ export default function SubjectSidebar() {
       {!locked && (
         <button
           onClick={() => openSubjectDialog(null)}
-          className="mt-auto flex items-center justify-center gap-1.5 w-full py-2 rounded-xl text-xs font-semibold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 border border-indigo-100 transition-colors"
+          className="mt-auto flex items-center justify-center gap-1.5 w-full py-2 rounded-xl text-xs font-semibold text-orange-600 bg-orange-50 hover:bg-orange-100 border border-orange-100 transition-colors"
         >
           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />

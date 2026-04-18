@@ -35,8 +35,16 @@ export default function AppShell() {
         className={`app-shell${isLoggedOut ? " is-logged-out" : ""}`}
         id="appShell"
       >
-        <TopTabs />
-        <AuthBar />
+        {/* Header row: logo + tabs left, auth right */}
+        <div className="flex items-center justify-between gap-3 flex-wrap">
+          <div className="flex items-center gap-3">
+            {/* Logo */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.svg" alt="EduPlan" height={36} style={{ height: 36, width: "auto" }} />
+            <TopTabs />
+          </div>
+          <AuthBar />
+        </div>
 
         {/* Planner view */}
         <div

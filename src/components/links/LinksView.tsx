@@ -103,7 +103,7 @@ export default function LinksView() {
         <h2 className="text-base font-semibold text-slate-800">Snabblänkar</h2>
         {!showAddForm && (
           <button
-            className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+            className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
             onClick={() => {
               setShowAddForm(true);
               setAddName("");
@@ -123,7 +123,7 @@ export default function LinksView() {
           <div className="flex flex-col gap-2">
             <input
               autoFocus
-              className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
               placeholder="Namn (t.ex. Skolverket)"
               value={addName}
               onChange={(e) => { setAddName(e.target.value); setAddError(""); }}
@@ -133,7 +133,7 @@ export default function LinksView() {
               }}
             />
             <input
-              className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
               placeholder="URL (t.ex. https://skolverket.se)"
               value={addUrl}
               onChange={(e) => { setAddUrl(e.target.value); setAddError(""); }}
@@ -148,7 +148,7 @@ export default function LinksView() {
           </div>
           <div className="flex gap-2">
             <button
-              className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+              className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
               onClick={handleAdd}
             >
               Spara
@@ -184,7 +184,7 @@ export default function LinksView() {
               return (
                 <div
                   key={link.id}
-                  className="border border-indigo-300 ring-1 ring-indigo-200 rounded-2xl bg-white shadow-sm p-4 flex flex-col gap-3"
+                  className="border border-orange-300 ring-1 ring-orange-200 rounded-2xl bg-white shadow-sm p-4 flex flex-col gap-3"
                 >
                   <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
                     Redigera länk
@@ -192,7 +192,7 @@ export default function LinksView() {
                   <div className="flex flex-col gap-2">
                     <input
                       autoFocus
-                      className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                       placeholder="Namn"
                       value={editName}
                       onChange={(e) => { setEditName(e.target.value); setEditError(""); }}
@@ -202,7 +202,7 @@ export default function LinksView() {
                       }}
                     />
                     <input
-                      className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                       placeholder="URL"
                       value={editUrl}
                       onChange={(e) => { setEditUrl(e.target.value); setEditError(""); }}
@@ -217,7 +217,7 @@ export default function LinksView() {
                   </div>
                   <div className="flex gap-2">
                     <button
-                      className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+                      className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
                       onClick={() => handleSaveEdit(link.id)}
                     >
                       Spara
@@ -255,7 +255,7 @@ export default function LinksView() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+                    className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
                   >
                     Öppna
                   </a>

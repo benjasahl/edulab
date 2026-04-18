@@ -88,7 +88,7 @@ export default function ScheduleGrid() {
       <div className="schedule">
         <div className="schedule-grid-layout">
           {/* ── Time column ── */}
-          <div className="time-col" style={{ height: "100%" }}>
+          <div className="time-col" style={{ height: 640 }}>
             {HOUR_TICKS.map((h) => {
               const pct = hourToPercent(h);
               if (pct < 0 || pct > 100) return null;
@@ -118,12 +118,12 @@ export default function ScheduleGrid() {
                     "day-header flex flex-col items-center justify-center py-1.5 px-1 mb-1",
                     "rounded-xl text-xs font-semibold select-none",
                     todayCol
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-orange-600 text-white"
                       : "bg-white/70 text-slate-600 border border-slate-200/80",
                   ].join(" ")}
                 >
                   <span className="uppercase tracking-wide">{day.slice(0, 3)}</span>
-                  <span className={todayCol ? "text-indigo-100" : "text-slate-400"}>
+                  <span className={todayCol ? "text-orange-100" : "text-slate-400"}>
                     {formatDayMonth(date)}
                   </span>
                 </div>

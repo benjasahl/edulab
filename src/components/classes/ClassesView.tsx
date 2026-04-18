@@ -116,7 +116,7 @@ export default function ClassesView() {
         <div className="flex items-center justify-between">
           <h2 className="text-base font-semibold text-slate-800">Klasser</h2>
           <button
-            className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+            className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
             onClick={() => {
               setNewClassName("");
               setAddClassDialogOpen(true);
@@ -132,7 +132,7 @@ export default function ClassesView() {
             <p className="text-sm font-semibold text-slate-700">Ny klass</p>
             <input
               autoFocus
-              className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
               placeholder="Klassnamn…"
               value={newClassName}
               onChange={(e) => setNewClassName(e.target.value)}
@@ -143,7 +143,7 @@ export default function ClassesView() {
             />
             <div className="flex gap-2">
               <button
-                className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+                className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
                 onClick={handleAddClass}
               >
                 Spara
@@ -170,7 +170,7 @@ export default function ClassesView() {
                 key={cls.id}
                 className={`border rounded-2xl bg-white shadow-sm px-4 py-2.5 flex items-center gap-2 cursor-pointer transition-colors ${
                   isActive
-                    ? "border-indigo-400 ring-1 ring-indigo-300"
+                    ? "border-orange-400 ring-1 ring-orange-300"
                     : "border-slate-200 hover:border-slate-300"
                 }`}
                 onClick={() => {
@@ -186,7 +186,7 @@ export default function ClassesView() {
                 {isPendingEdit ? (
                   <input
                     autoFocus
-                    className="w-full border border-slate-200 rounded-xl px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full border border-slate-200 rounded-xl px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                     value={editClassName}
                     onChange={(e) => setEditClassName(e.target.value)}
                     onClick={(e) => e.stopPropagation()}
@@ -207,7 +207,7 @@ export default function ClassesView() {
 
                 {isPendingEdit ? (
                   <button
-                    className="text-xs text-indigo-600 font-semibold hover:underline ml-1"
+                    className="text-xs text-orange-600 font-semibold hover:underline ml-1"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleSaveEditClass(cls.id);
@@ -217,7 +217,7 @@ export default function ClassesView() {
                   </button>
                 ) : (
                   <button
-                    className="text-xs text-slate-400 hover:text-indigo-600 transition-colors"
+                    className="text-xs text-slate-400 hover:text-orange-600 transition-colors"
                     title="Redigera namn"
                     onClick={(e) => {
                       e.stopPropagation();
@@ -302,7 +302,7 @@ export default function ClassesView() {
                         {isEditingStudent ? (
                           <input
                             autoFocus
-                            className="w-full border border-slate-200 rounded-xl px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                            className="w-full border border-slate-200 rounded-xl px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                             value={editStudentFirst}
                             onChange={(e) => setEditStudentFirst(e.target.value)}
                             onKeyDown={(e) => {
@@ -311,7 +311,7 @@ export default function ClassesView() {
                             }}
                           />
                         ) : (
-                          <span className="cursor-pointer hover:text-indigo-600 transition-colors">
+                          <span className="cursor-pointer hover:text-orange-600 transition-colors">
                             {student.firstName || <span className="text-slate-300 italic">—</span>}
                           </span>
                         )}
@@ -320,7 +320,7 @@ export default function ClassesView() {
                         {isEditingStudent ? (
                           <div className="flex gap-2 items-center">
                             <input
-                              className="w-full border border-slate-200 rounded-xl px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                              className="w-full border border-slate-200 rounded-xl px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                               value={editStudentLast}
                               onChange={(e) => setEditStudentLast(e.target.value)}
                               onKeyDown={(e) => {
@@ -329,7 +329,7 @@ export default function ClassesView() {
                               }}
                             />
                             <button
-                              className="bg-indigo-600 text-white font-semibold px-3 py-1.5 rounded-xl hover:bg-indigo-700 transition-colors text-xs whitespace-nowrap"
+                              className="bg-orange-600 text-white font-semibold px-3 py-1.5 rounded-xl hover:bg-orange-700 transition-colors text-xs whitespace-nowrap"
                               onClick={() => handleSaveEditStudent(activeClass.id, student.id)}
                             >
                               Spara
@@ -342,7 +342,7 @@ export default function ClassesView() {
                             </button>
                           </div>
                         ) : (
-                          <span className="cursor-pointer hover:text-indigo-600 transition-colors">
+                          <span className="cursor-pointer hover:text-orange-600 transition-colors">
                             {student.lastName || <span className="text-slate-300 italic">—</span>}
                           </span>
                         )}
@@ -376,11 +376,11 @@ export default function ClassesView() {
 
                 {/* Add student inline row */}
                 {showAddStudent && (
-                  <tr className="border-t border-slate-100 bg-indigo-50/40">
+                  <tr className="border-t border-slate-100 bg-orange-50/40">
                     <td className="px-4 py-2">
                       <input
                         autoFocus
-                        className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                         placeholder="Förnamn"
                         value={newFirstName}
                         onChange={(e) => setNewFirstName(e.target.value)}
@@ -396,7 +396,7 @@ export default function ClassesView() {
                     </td>
                     <td className="px-4 py-2">
                       <input
-                        className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                         placeholder="Efternamn"
                         value={newLastName}
                         onChange={(e) => setNewLastName(e.target.value)}
@@ -413,7 +413,7 @@ export default function ClassesView() {
                     <td className="px-4 py-2">
                       <div className="flex gap-2 justify-end">
                         <button
-                          className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+                          className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
                           onClick={handleAddStudent}
                         >
                           Spara
@@ -438,7 +438,7 @@ export default function ClassesView() {
 
           {!showAddStudent && !activeClass.locked && (
             <button
-              className="self-start bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm"
+              className="self-start bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors text-sm"
               onClick={() => {
                 setShowAddStudent(true);
                 setEditStudentId(null);

@@ -115,7 +115,7 @@ export default function BlockDialog() {
   }
 
   const inputClass =
-    "w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500";
+    "w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500";
   const labelClass = "block text-xs font-medium text-slate-600 mb-1";
 
   return (
@@ -250,7 +250,7 @@ export default function BlockDialog() {
         <div className="mt-5 flex flex-wrap gap-2">
           <button
             onClick={handleSave}
-            className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors"
+            className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors"
           >
             Spara
           </button>

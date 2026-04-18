@@ -30,7 +30,7 @@ export default function TopTabs() {
             onClick={() => setTopView(tab.key)}
             className={
               isActive
-                ? "bg-indigo-600 text-white shadow-md font-bold px-4 py-1.5 rounded-xl text-sm transition-all"
+                ? "bg-orange-600 text-white shadow-md font-bold px-4 py-1.5 rounded-xl text-sm transition-all"
                 : "text-slate-600 font-medium px-4 py-1.5 rounded-xl text-sm hover:bg-slate-100 transition-all"
             }
           >

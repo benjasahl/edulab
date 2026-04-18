@@ -36,7 +36,7 @@ export default function BootOverlay() {
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm">
         <div className="flex flex-col items-center gap-3">
           <svg
-            className="h-8 w-8 animate-spin text-indigo-600"
+            className="h-8 w-8 animate-spin text-orange-600"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -85,10 +85,11 @@ export default function BootOverlay() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm">
       <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-8 shadow-xl">
-        {/* Title */}
-        <h1 className="mb-1 text-center text-2xl font-bold text-slate-800">
-          Lärarplanering
-        </h1>
+        {/* Logo */}
+        <div className="flex justify-center mb-5">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="EduPlan" style={{ height: 56, width: "auto" }} />
+        </div>
         <p className="mb-6 text-center text-sm text-slate-500">
           {isSignIn ? "Logga in på ditt konto" : "Skapa ett nytt konto"}
         </p>
@@ -102,7 +103,7 @@ export default function BootOverlay() {
             onChange={(e) => setEmail(e.target.value)}
             required
             autoComplete="email"
-            className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           <input
             type="password"
@@ -111,7 +112,7 @@ export default function BootOverlay() {
             onChange={(e) => setPassword(e.target.value)}
             required
             autoComplete={isSignIn ? "current-password" : "new-password"}
-            className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
 
           {/* Error */}
@@ -125,7 +126,7 @@ export default function BootOverlay() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-indigo-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-indigo-700 transition-colors disabled:opacity-60"
+            className="bg-orange-600 text-white font-semibold px-3.5 py-2 rounded-xl hover:bg-orange-700 transition-colors disabled:opacity-60"
           >
             {loading
               ? "Vänta…"
@@ -143,7 +144,7 @@ export default function BootOverlay() {
               <button
                 type="button"
                 onClick={() => { setAuthMode("signup"); setError(""); }}
-                className="font-semibold text-indigo-600 hover:underline"
+                className="font-semibold text-orange-600 hover:underline"
               >
                 Skapa konto
               </button>
@@ -154,7 +155,7 @@ export default function BootOverlay() {
               <button
                 type="button"
                 onClick={() => { setAuthMode("signin"); setError(""); }}
-                className="font-semibold text-indigo-600 hover:underline"
+                className="font-semibold text-orange-600 hover:underline"
               >
                 Logga in
               </button>

@@ -143,7 +143,7 @@ export default function ResultsGrid({ resultsSet }: Props) {
                     {editingAreaIdx === aIdx ? (
                       <input
                         autoFocus
-                        className="w-24 border border-indigo-400 rounded px-1 py-0.5 text-xs focus:outline-none"
+                        className="w-24 border border-orange-400 rounded px-1 py-0.5 text-xs focus:outline-none"
                         value={areaDraft}
                         onChange={(e) => setAreaDraft(e.target.value)}
                         onBlur={commitArea}
@@ -154,7 +154,7 @@ export default function ResultsGrid({ resultsSet }: Props) {
                       />
                     ) : (
                       <span
-                        className="cursor-pointer hover:text-indigo-600"
+                        className="cursor-pointer hover:text-orange-600"
                         onClick={() => openAreaEdit(aIdx)}
                         title="Klicka för att redigera"
                       >
@@ -193,7 +193,7 @@ export default function ResultsGrid({ resultsSet }: Props) {
                         {editingStudentIdx === sIdx ? (
                           <input
                             autoFocus
-                            className="w-28 border border-indigo-400 rounded px-1 py-0.5 text-xs focus:outline-none"
+                            className="w-28 border border-orange-400 rounded px-1 py-0.5 text-xs focus:outline-none"
                             value={studentDraft}
                             onChange={(e) => setStudentDraft(e.target.value)}
                             onBlur={commitStudent}
@@ -204,7 +204,7 @@ export default function ResultsGrid({ resultsSet }: Props) {
                           />
                         ) : (
                           <span
-                            className="cursor-pointer hover:text-indigo-600"
+                            className="cursor-pointer hover:text-orange-600"
                             onClick={() => openStudentEdit(sIdx)}
                             title="Klicka för att redigera"
                           >
@@ -238,7 +238,7 @@ export default function ResultsGrid({ resultsSet }: Props) {
                           {isEditing ? (
                             <input
                               autoFocus
-                              className="w-12 text-center border border-indigo-400 rounded px-1 py-0.5 text-xs focus:outline-none bg-white"
+                              className="w-12 text-center border border-orange-400 rounded px-1 py-0.5 text-xs focus:outline-none bg-white"
                               value={cellDraft}
                               onChange={(e) => setCellDraft(e.target.value)}
                               onBlur={commitCell}

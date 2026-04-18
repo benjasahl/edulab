@@ -89,7 +89,7 @@ export default function AuthBar() {
       <button
         type="button"
         onClick={() => setBootVisible(true)}
-        className="text-indigo-600 font-semibold hover:underline text-sm"
+        className="text-orange-600 font-semibold hover:underline text-sm"
       >
         Logga in
       </button>

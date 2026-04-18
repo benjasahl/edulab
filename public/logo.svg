@@ -1,0 +1,30 @@
+<svg width="100%" viewBox="0 0 680 280" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>EduPlan logo</title>
+  <!-- Icon badge -->
+  <rect x="60" y="70" width="140" height="140" rx="28" fill="#F97316"/>
+  <!-- Open book -->
+  <path d="M100 180 L100 125 Q130 116 160 125 L160 180 Z" fill="#FFFFFF"/>
+  <path d="M160 180 L160 125 Q190 116 220 125 L220 180 Z" fill="#FFE4CC"/>
+  <line x1="160" y1="125" x2="160" y2="180" stroke="#F97316" stroke-width="2"/>
+  <path d="M100 180 Q160 186 220 180" stroke-width="2.5" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 125 Q130 118 160 125" fill="none" stroke="#FFE4CC" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Pencil over book -->
+  <g transform="rotate(-38, 192, 138)">
+    <rect x="185" y="112" width="10" height="38" rx="2" fill="#FFFFFF"/>
+    <polygon points="185,150 195,150 190,162" fill="#FFCBA4"/>
+    <rect x="185" y="112" width="10" height="7" rx="1" fill="#FFD580"/>
+    <line x1="190" y1="159" x2="190" y2="162" stroke="#3B1A08" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="185" y1="118" x2="195" y2="118" stroke="#F4A261" stroke-width="1" opacity="0.5"/>
+  </g>
+  <!-- Calendar dots -->
+  <circle cx="115" cy="138" r="2.5" fill="#F97316" opacity="0.7"/>
+  <circle cx="125" cy="138" r="2.5" fill="#F97316" opacity="0.7"/>
+  <circle cx="135" cy="138" r="2.5" fill="#F97316" opacity="0.7"/>
+  <circle cx="115" cy="148" r="2.5" fill="#F97316" opacity="0.7"/>
+  <circle cx="125" cy="148" r="2.5" fill="#F97316" opacity="0.5"/>
+  <circle cx="135" cy="148" r="2.5" fill="#F97316" opacity="0.7"/>
+  <!-- Brand name -->
+  <text x="224" y="158" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="56" font-weight="700">
+    <tspan fill="#F97316">Edu</tspan><tspan fill="#C2410C">Plan</tspan>
+  </text>
+</svg>

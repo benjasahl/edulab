@@ -6,15 +6,16 @@
   --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --color-accent:        #4f46e5;
-  --color-accent-light:  #818cf8;
-  --color-accent-bg:     rgba(79,70,229,.06);
+  --color-accent:        #f97316;
+  --color-accent-dark:   #c2410c;
+  --color-accent-light:  #fb923c;
+  --color-accent-bg:     rgba(249,115,22,.06);
   --color-danger:        #dc2626;
   --color-success:       #059669;
   --color-warning:       #d97706;
   --color-panel:         #ffffff;
-  --color-bg-primary:    #f0f2f8;
-  --color-bg-secondary:  #e8ecf4;
+  --color-bg-primary:    #faf7f5;
+  --color-bg-secondary:  #f3ede8;
   --color-line:          rgba(15,23,42,.08);
   --color-line-strong:   rgba(15,23,42,.12);
   --color-muted:         #64748b;
@@ -46,8 +47,8 @@ body {
   color: #0f172a;
   background: var(--color-bg-primary);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(79,70,229,.06), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(59,130,246,.04), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(249,115,22,.05), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(194,65,12,.04), transparent);
   font-size: clamp(12px, .9vw, 14px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -69,7 +70,7 @@ button, select, input, textarea { font: inherit }
 @keyframes fadeInDown    { from { opacity: 0; transform: translateY(-8px) } to { opacity: 1; transform: translateY(0) } }
 @keyframes popIn         { 0% { opacity:0; transform:scale(.9) translateY(4px) } 60% { transform:scale(1.02) translateY(-1px) } 100% { opacity:1; transform:scale(1) translateY(0) } }
 @keyframes shimmer       { 0% { background-position:200% 50% } 100% { background-position:-200% 50% } }
-@keyframes pulseGlow     { 0%,100% { box-shadow:0 0 0 0 rgba(79,70,229,.2) } 50% { box-shadow:0 0 0 6px rgba(79,70,229,0) } }
+@keyframes pulseGlow     { 0%,100% { box-shadow:0 0 0 0 rgba(249,115,22,.2) } 50% { box-shadow:0 0 0 6px rgba(249,115,22,0) } }
 @keyframes blockSlideIn  { from { opacity:0; transform:translateX(-8px) scaleX(.95) } to { opacity:1; transform:translateX(0) scaleX(1) } }
 @keyframes menuSlideIn   { from { opacity:0; transform:translateY(-6px) scale(.97) } to { opacity:1; transform:translateY(0) scale(1) } }
 @keyframes dialogEnter   {
@@ -96,10 +97,21 @@ html.auth-boot #appShell { visibility: hidden; pointer-events: none }
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 14px;
+  gap: 10px;
+  padding: 12px 14px;
   animation: appShellReveal .7s var(--ease-out-expo);
 }
+
+.top-view {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Utility classes */
+.panel  { background: var(--color-panel); border-radius: var(--radius-lg); border: 1px solid var(--color-line); box-shadow: var(--shadow-sm); }
+.muted  { color: var(--color-muted); }
+.small  { font-size: 0.8em; }
 
 /* ═══ SCHEDULE GRID ═══ */
 .schedule-wrap { flex: 1 1 auto; min-height: 260px; overflow: auto; position: relative; z-index: 1 }
@@ -121,7 +133,7 @@ html.auth-boot #appShell { visibility: hidden; pointer-events: none }
   transition: all .25s var(--ease-smooth);
 }
 .day-col.edit-mode   { cursor: crosshair }
-.day-col.drop-target { outline: 2px dashed rgba(79,70,229,.4); outline-offset: -4px }
+.day-col.drop-target { outline: 2px dashed rgba(249,115,22,.4); outline-offset: -4px }
 .hour-line  { position: absolute; left: 0; right: 0; height: 1px; background: rgba(226,232,240,.6); pointer-events: none; z-index: 0 }
 .time-label {
   position: absolute; left: 8px; transform: translateY(-50%);
@@ -160,7 +172,7 @@ html.auth-boot #appShell { visibility: hidden; pointer-events: none }
 .block:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(15,23,42,.1);
-  outline: 2px solid rgba(79,70,229,.2);
+  outline: 2px solid rgba(249,115,22,.2);
 }
 .block:active { transform: scale(.99) }
 .block.planned {
@@ -213,12 +225,12 @@ html.auth-boot #appShell { visibility: hidden; pointer-events: none }
   display: none;
 }
 .edit-mode .resize-handle { display: block }
-.resize-handle:hover { background: linear-gradient(to bottom,transparent 0,rgba(79,70,229,.15) 100%) }
+.resize-handle:hover { background: linear-gradient(to bottom,transparent 0,rgba(249,115,22,.15) 100%) }
 
 .block-outline-preview {
   position: absolute; left: 8px; right: 8px;
-  border: 2px dashed rgba(79,70,229,.6);
-  background: rgba(79,70,229,.12);
+  border: 2px dashed rgba(249,115,22,.6);
+  background: rgba(249,115,22,.12);
   border-radius: 4px; pointer-events: none; z-index: 7;
 }
 
@@ -307,7 +319,7 @@ dialog::backdrop {
   backdrop-filter: blur(8px);
 }
 .context-menu button { width: 100%; text-align: left; border-radius: 8px; padding: 8px 12px }
-.context-menu button:hover { background: rgba(79,70,229,.06); color: #4f46e5 }
+.context-menu button:hover { background: rgba(249,115,22,.06); color: #f97316 }
 
 /* ═══ SWITCH / TOGGLE ═══ */
 .switch { position: relative; width: 44px; height: 24px; display: inline-block }
@@ -324,7 +336,7 @@ dialog::backdrop {
   transition: all .25s var(--ease-spring);
   box-shadow: 0 2px 8px rgba(0,0,0,.18);
 }
-.switch input:checked + .slider { background: #4f46e5; box-shadow: 0 0 12px rgba(79,70,229,.3) }
+.switch input:checked + .slider { background: #f97316; box-shadow: 0 0 12px rgba(249,115,22,.3) }
 .switch input:checked + .slider::before { transform: translateX(20px) }
 
 /* ═══ SPECIAL DAY COLORS ═══ */
@@ -340,7 +352,7 @@ dialog::backdrop {
   line-height: 1.45; white-space: pre-wrap; word-break: break-word;
   overflow-wrap: anywhere; cursor: text;
 }
-.subject-editor a { color: #4f46e5; text-decoration: underline; cursor: pointer }
+.subject-editor a { color: #f97316; text-decoration: underline; cursor: pointer }
 .subject-editor a:hover { color: #4338ca }
 .subject-editor:empty::before { content: "Skriv här…"; color: #475569; opacity: .5 }
 

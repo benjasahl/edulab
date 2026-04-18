@@ -3,7 +3,10 @@ import { AppState } from "@/types";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
-const isConfigured = !!supabaseUrl && !!supabaseAnonKey;
+const isConfigured =
+  !!supabaseUrl &&
+  !!supabaseAnonKey &&
+  supabaseUrl.startsWith("https://");
 
 // We only instantiate the client in the browser (or when both values are present).
 let _client: SupabaseClient | null = null;
