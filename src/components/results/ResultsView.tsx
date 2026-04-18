@@ -59,7 +59,7 @@ export default function ResultsView() {
     "w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500";
 
   return (
-    <div className="flex flex-row h-full min-h-0">
+    <div className="flex flex-row" style={{ height: "100%", minHeight: 0 }}>
       {/* ── Sidebar ── */}
       <div className="w-56 flex-none border-r border-slate-200 flex flex-col">
         <div className="p-3 border-b border-slate-200">

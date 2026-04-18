@@ -97,7 +97,7 @@ export default function LinksView() {
   }
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="view-scroll-inner flex flex-col gap-5">
       {/* Header row */}
       <div className="flex items-center justify-between">
         <h2 className="text-base font-semibold text-slate-800">Snabblänkar</h2>

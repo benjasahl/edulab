@@ -105,7 +105,13 @@ html.auth-boot #appShell { visibility: hidden; pointer-events: none }
 .top-view {
   flex: 1 1 auto;
   min-height: 0;
-  overflow: hidden;
+  overflow: auto;
+}
+
+/* Views that manage their own scroll (planner) use overflow:hidden on their root */
+.view-scroll-inner {
+  padding: 20px 24px;
+  max-width: 960px;
 }
 
 /* Utility classes */

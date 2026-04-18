@@ -54,9 +54,9 @@ export default function PlannerView() {
   }
 
   return (
-    <div className="flex flex-col gap-3 h-full min-h-0">
+    <div className="flex flex-col gap-3 h-full min-h-0 overflow-hidden px-1 py-1">
       {/* ── Week navigation bar ── */}
-      <div className="flex items-center gap-2 flex-wrap px-1">
+      <div className="flex items-center gap-2 overflow-x-auto pb-0.5" style={{ flexWrap: "nowrap" }}>
         {/* Prev / Today / Next */}
         <button
           onClick={handlePrev}

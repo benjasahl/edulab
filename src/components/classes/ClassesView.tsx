@@ -110,7 +110,7 @@ export default function ClassesView() {
   }
 
   return (
-    <div className="flex gap-6 h-full min-h-0">
+    <div className="view-scroll-inner flex gap-6 min-h-0">
       {/* ── Left panel: class list ── */}
       <div className="w-72 flex-shrink-0 flex flex-col gap-3">
         <div className="flex items-center justify-between">

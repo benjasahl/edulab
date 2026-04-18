@@ -116,7 +116,7 @@ export default function BlockDialog() {
 
   const inputClass =
     "w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-orange-500";
-  const labelClass = "block text-xs font-medium text-slate-600 mb-1";
+  const labelClass = "text-xs font-medium text-slate-600";
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
@@ -125,7 +125,7 @@ export default function BlockDialog() {
           {blockId ? "Redigera block" : "Nytt block"}
         </h2>
 
-        <div className="space-y-3">
+        <div className="flex flex-col gap-3">
           {/* Type */}
           <div>
             <label className={labelClass}>Typ</label>
